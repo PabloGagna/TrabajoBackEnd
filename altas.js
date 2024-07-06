@@ -3,21 +3,21 @@ const URL = "https://pablogagna.pythonanywhere.com/"
 document.getElementById('formulario').addEventListener('submit', function (event){
     event.preventDefault();
     var formData = new FormData(this);
-    fetch(URL + 'productos',{
+    fetch(URL + 'productos', {
         method: 'POST',
         body: formData
     })
-    .then(function (response){
-        if (response.ok){
+    .then(function (response) {
+        if (response.ok) {
             return response.json();
-        }else{
+        }else {
             throw new Error('Error al agregar el producto');
         }
     })
-        .then(function (data){
+        .then(function (data) {
             alert('Producto agregado correctamente');
         })
-        .catch(function (error){
+        .catch(function (error) {
             alert('Error al agregar el producto');
         })
         .finally(function(){
