@@ -1,4 +1,4 @@
-const URL = "https://pablogagna.pythonanywhere.com/"
+const URL = "https://pablogagna.pythonanywhere.com/";
 
 document.getElementById('formulario').addEventListener('submit', function (event){
     event.preventDefault();
